@@ -65,8 +65,8 @@ class ImageSelectViewController: UIViewController, UIImagePickerControllerDelega
     func imageEditor(_ editor: CLImageEditor!, didFinishEditingWith image: UIImage!) {
         //投稿の画面を開く
         let postViewController = self.storyboard?.instantiateViewController(withIdentifier: "Post") as! PostViewController
-        PostViewController.image = image!
-        editor.present(PostViewController, animated: true, completion: nil)
+        postViewController.image = image!
+        editor.present(postViewController, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
